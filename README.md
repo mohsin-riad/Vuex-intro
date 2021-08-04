@@ -1,5 +1,7 @@
 # Vuex-intro
-> vue : ``` vue 3x ``` 
+
+> vue : ``` 3x ``` 
+
 > vuex : ``` 4x ```
-> 
+
 Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
