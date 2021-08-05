@@ -5,6 +5,13 @@ export default createStore({
     counter: 10,
   },
   mutations: {
+    addToCounter(state, payload) {
+      state.counter += parseInt(payload);
+    },
+    subFromCounter(state, payload) {
+      state.counter -= parseInt(payload);
+    },
+
   },
   actions: {
   },
