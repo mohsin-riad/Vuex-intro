@@ -4,6 +4,7 @@ import C1 from '../components/C1.vue'
 import C2 from '../components/C2.vue'
 import C3 from '../components/C3.vue'
 import Counter from '../components/Counter.vue'
+import History from '../components/History.vue'
 
 const routes = [
   {
@@ -30,6 +31,13 @@ const routes = [
                     path: '/',
                     name: 'Counter',
                     component: Counter,
+                    children: [
+                      {
+                        path: '/',
+                        name: 'History',
+                        component: History,
+                      }
+                    ]
                   },
                 ]
               },

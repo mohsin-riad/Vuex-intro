@@ -16,6 +16,7 @@
         <button @click="mulRandomNo" class="hover:bg-green-600 grid-cols-3 font-bold text-white  bg-green-500 text-lg py-2 px-4 mr-2 hover:border-transparent rounded">x</button>
         <button @click="divRandomNo" class="hover:bg-green-600 grid-cols-3 font-extrabold text-white  bg-green-500 text-lg py-2 px-4 hover:border-transparent rounded">÷</button>
     </div>
+    <router-view/>
   </div>
 </template>
 
