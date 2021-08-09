@@ -3,22 +3,26 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    counter: 10,
+    counter: 0,
+    history: [0]
   },
   mutations: {
     addToCounter(state, payload) {
       state.counter += parseInt(payload);
+      state.history.push(state.counter)
     },
     subFromCounter(state, payload) {
       state.counter -= parseInt(payload);
+      state.history.push(state.counter)
     },
     mulWithCounter(state, payload) {
       state.counter *= parseInt(payload);
+      state.history.push(state.counter)
     },
     divFromCounter(state, payload) {
       state.counter /= parseInt(payload);
+      state.history.push(state.counter)
     },
-
   },
   actions: {
     async addRandomNo(context) {
@@ -41,6 +45,17 @@ export default createStore({
       const response = await axios.get(baseURL);
       context.commit("divFromCounter", response.data);
     },
+  },
+  getters: {
+    activeIndexes: (state) => (payload) => {
+      let indexes = [];
+      state.history.forEach((number, index) => {
+        if(number === payload){
+          indexes.push(index)
+        }
+      });
+      return indexes
+    }
   },
   modules: {
   }
