@@ -21,6 +21,19 @@ vue create vue-intro
 vue add tailwind 
 ```
 
+### Api Package configuration [Axios]
+``` bash
+# individual project integration
+npm i axios --save
+```
+> Add to:  ``` src/main.js ```
+``` bash
+import axios from 'axios'
+```
+> used to sent POST and GET request to the server
+
+> Open source api from [RandomNumber](https://random.org/integers)
+
 ## Compiles and hot-reloads for development
 ``` bash
 npm run serve
